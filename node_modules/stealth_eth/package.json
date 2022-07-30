@@ -1,0 +1,73 @@
+{
+  "_args": [
+    [
+      "stealth_eth@github:eddieoz/stealth_eth",
+      "/home/moumen_ux/node/eGov"
+    ]
+  ],
+  "_from": "stealth_eth@github:eddieoz/stealth_eth",
+  "_id": "stealth_eth@git+ssh://git@github.com/eddieoz/stealth_eth.git#a8df2e71aaf4ba9906dfaa4dc2f070339f523171",
+  "_inBundle": false,
+  "_integrity": "",
+  "_location": "/stealth_eth",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "git",
+    "raw": "stealth_eth@github:eddieoz/stealth_eth",
+    "name": "stealth_eth",
+    "escapedName": "stealth_eth",
+    "rawSpec": "github:eddieoz/stealth_eth",
+    "saveSpec": "github:eddieoz/stealth_eth",
+    "fetchSpec": null,
+    "gitCommittish": null
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "git+ssh://git@github.com/eddieoz/stealth_eth.git#a8df2e71aaf4ba9906dfaa4dc2f070339f523171",
+  "_spec": "github:eddieoz/stealth_eth",
+  "_where": "/home/moumen_ux/node/eGov",
+  "author": {
+    "name": "JP Richardson && update by Edilson Osorio Jr."
+  },
+  "bugs": {
+    "url": "https://github.com/eddieoz/stealth_eth/issues"
+  },
+  "dependencies": {
+    "bs58": "^2.0.1",
+    "coinkey": "^3.0.0",
+    "ecurve": "^1.0.1",
+    "ethereumjs-utils": "^5.2.5",
+    "web3": "^1.0.0-beta2"
+  },
+  "description": "Stealth addresses for Bitcoin/Ethereum and other crypto currencies.",
+  "devDependencies": {
+    "coveralls": "^2.11.2",
+    "istanbul": "^0.4.5",
+    "mocha": "^2.1.0",
+    "standard": "^2.10.0"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "homepage": "https://github.com/eddieoz/stealth_eth",
+  "keywords": [
+    "bitcoin",
+    "steatlth",
+    "addresses",
+    "privacy"
+  ],
+  "license": "MIT",
+  "main": "lib/stealth_eth.js",
+  "name": "stealth_eth",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eddieoz/stealth_eth.git"
+  },
+  "scripts": {
+    "coverage": "istanbul cover ./node_modules/.bin/_mocha -- --reporter list test/*.js",
+    "coveralls": "npm run coverage && coveralls < coverage/lcov.info",
+    "test": "standard && mocha"
+  },
+  "version": "0.4.0"
+}
