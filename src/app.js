@@ -4,13 +4,13 @@ import mongoose from './services/mongoose'
 import express from './services/express'
 import api from './api'
 import { nextTick } from 'process'
-const path = require('path');
-const contract = require("truffle-contract");
+import path from "path";
+import contract from "truffle-contract";
 const HallJson = require(path.join(__dirname, '../build/contracts/Haal.json'));
-const ethereum = require('ethereumjs-utils');
+import ethereum from "ethereumjs-utils";
 
-const bodyParser = require("body-parser");
-var serveStatic = require('serve-static');
+// const bodyParser = require("body-parser");
+// var serveStatic = require('serve-static');
 
 // const Web3 = require('web3');
 // const Stealth = require('stealth_eth');
@@ -117,8 +117,8 @@ const initWeb3 = async () => {
 
 
 const app = express(apiRoot, api)
-// const server = http.createServer(app)
-app.use(serveStatic(__dirname + "/dist"));
+const server = http.createServer(app)
+// app.use(serveStatic(__dirname + "/dist"));
 
 if (mongo.uri) {
   mongoose.connect(mongo.uri).then(() => {
@@ -135,14 +135,14 @@ mongoose.Promise = Promise
 //app.use(bodyParser.json())
 
 setImmediate(() => {
-  // server.listen(port, ip, () => {
-  //   console.log('Express server listening on http://%s:%d, in %s mode', ip, port, env)
-  // })
-  app.listen(port, () => {
-    console.log({
-      message: `server running on http://localhost:${port}`,
-    });
-  });
+  server.listen(port, ip, () => {
+    console.log('Express server listening on http://%s:%d, in %s mode', ip, port, env)
+  })
+  // app.listen(port, () => {
+  //   console.log({
+  //     message: `server running on http://localhost:${port}`,
+  //   });
+  // });
   
 })
 
