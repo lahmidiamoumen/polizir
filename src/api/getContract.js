@@ -9,7 +9,7 @@ const mnemonic = "upon punch supply alone much twist dumb sustain truth wire dem
 
 
 const getProvider = () => {
-    return (new Provider(mnemonic, "https://ropsten.infura.io/v3/d9c83be4262d4a209bdb2c1249aaab40"));
+    return (new Provider(mnemonic, "https://eth-goerli.g.alchemy.com/v2/s5PuumokiYeVqNyDVkFRyWagXtWGMXvU"));
     //return (new Web3.providers.HttpProvider("https://ropsten.infura.io/v3/d9c83be4262d4a209bdb2c1249aaab40:8545"));
     //return (new Web3.providers.HttpProvider("http://127.0.0.1:8545"));
   };
