@@ -4,8 +4,8 @@ import { middleware as body } from 'bodymen'
 import { token } from '../../services/passport'
 import { create, index, show, update, destroy, voteOn } from './controller'
 import { schema ,votedOn , postId } from './model'
-export Post, { schema } from './model'
-
+import Post from './model'
+export  {Post , schema }
 
 const schemaQuery = new Schema({
   topics: {
